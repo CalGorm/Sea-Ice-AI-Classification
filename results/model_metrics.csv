@@ -1,0 +1,4 @@
+model,test_accuracy_percent,macro_f1,mean_prediction_time_seconds
+Random Forest,93.42,0.934,0.0828
+CNN,78.48,0.785,0.3778
+ViT,93.35,0.934,1.3279
