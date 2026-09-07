@@ -1,0 +1,6 @@
+workload,energy_kwh,emissions_kg_co2eq
+Data loading,0.00002704,0.00001273
+21-band RF single training,0.00009695,0.00004564
+5-band RF single training,0.00009777,0.00004603
+21-band RF repeated 5 trainings,0.00044974,0.00021173
+5-band RF repeated 5 trainings,0.00018756,0.00008830
