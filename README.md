@@ -8,6 +8,12 @@ This project investigates binary sea-ice/lead classification from 21-band optica
 
 Can sea ice and leads be classified accurately from 21-band satellite imagery using a computationally efficient machine-learning approach, and can spectral feature selection reduce model complexity without sacrificing classification performance?
 
+## Why this matters
+
+Sea ice and leads are important features of polar environments. Leads create openings within sea ice that affect exchanges of heat, moisture and energy between the ocean and atmosphere, so identifying their spatial distribution is useful for environmental monitoring and polar research. Repeated in-situ observations over large polar regions are difficult, whereas satellite Earth observation provides spatially extensive measurements that can be collected consistently across remote areas.
+
+The project also examines whether additional spectral and model complexity is actually necessary for this classification task. Using all 21 spectral bands and more complex deep-learning models can increase computational cost without guaranteeing better performance. Comparing Random Forest, CNN and ViT models, followed by a reduced-band Random Forest experiment, allows the accuracy, interpretability and computational efficiency of different approaches to be assessed together. This is relevant to researchers and organisations developing practical Earth-observation workflows where reliable results and efficient use of computing resources are both important.
+
 ## Project workflow
 
 ![Workflow for Sea-Ice and Lead Classification](figures/Workflow_Sea_Ice_Lead_Classification.png)
