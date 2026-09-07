@@ -187,3 +187,9 @@ Sea-Ice-AI-Classification/
 Random Forest provided the strongest overall accuracy-efficiency trade-off for this dataset. Its test accuracy of 93.42% was essentially the same as the ViT at 93.35%, while its mean prediction time was much lower. The CNN performed less well at 78.48% test accuracy.
 
 The spectral-band experiment also showed that all 21 bands were not necessary for comparable Random Forest performance in this case. Using Bands 1, 2, 3, 4 and 15 produced a mean accuracy of 93.66% across five seeds compared with 93.05% using all 21 bands, while reducing mean training time by 59.8% and measured training energy and CodeCarbon-estimated emissions by about 58.3%. These results suggest that, for this dataset, a simpler model with a smaller spectral input can achieve similar classification performance at lower computational cost, although further validation would be needed before generalising the result to other images, locations or conditions.
+
+## Coursework mapping
+
+- Week 1: IRIS mask creation and reference labelling used to generate the labelled sea-ice/lead training data.
+- Week 2: Sea-ice/lead classification and machine-learning implementation, including Random Forest, CNN and ViT training and evaluation.
+- Week 3: Spatial rollout outputs for Random Forest, CNN and ViT: `RF_image2_sample1_25208373.png`, `CNN_image2_sample1_25208373.png`, and `ViT_image2_sample1_25208373.png`.
