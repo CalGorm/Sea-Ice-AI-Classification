@@ -2,11 +2,11 @@
 
 ## Do all 21 spectral bands matter?
 
-This project investigates binary sea-ice/lead classification from 21-band optical Earth-observation imagery. Three approaches are compared: **Random Forest (RF)**, a **Convolutional Neural Network (CNN)** and a **Vision Transformer (ViT)**. A reduced-band Random Forest experiment is then used to test whether spectral dimensionality can be reduced without sacrificing classification performance.
+This project investigates binary sea-ice/lead classification from 21-band optical Earth-observation imagery. Three approaches are compared: Random Forest (RF), a Convolutional Neural Network (CNN) and a Vision Transformer (ViT). A reduced-band Random Forest experiment is then used to test whether spectral dimensionality can be reduced without sacrificing classification performance.
 
 ## Research question
 
-**Can sea ice and leads be classified accurately from 21-band satellite imagery using a computationally efficient machine-learning approach, and can spectral feature selection reduce model complexity without sacrificing classification performance?**
+Can sea ice and leads be classified accurately from 21-band satellite imagery using a computationally efficient machine-learning approach, and can spectral feature selection reduce model complexity without sacrificing classification performance?
 
 ## Project workflow
 
@@ -17,7 +17,7 @@ This project investigates binary sea-ice/lead classification from 21-band optica
 ## Workflow steps
 
 1. Label sea-ice/lead regions using IRIS.
-2. Extract labelled **3 × 3 × 21** image patches.
+2. Extract labelled 3 × 3 × 21 image patches.
 3. Balance the binary classes and split into training and test data.
 4. Train RF, CNN and ViT classifiers.
 5. Compare accuracy, precision, recall, F1 score and confusion matrices.
@@ -28,11 +28,11 @@ This project investigates binary sea-ice/lead classification from 21-band optica
 
 ## Model results
 
-All three models were evaluated on the same held-out test set of **1,580 samples**.
+All three models were evaluated on the same held-out test set of 1,580 samples.
 
 | Model | Test accuracy | Macro F1 | Mean prediction time |
 |---|---:|---:|---:|
-| **Random Forest** | **93.42%** | **0.934** | **0.0828 s** |
+| Random Forest | 93.42% | 0.934 | 0.0828 s |
 | ViT | 93.35% | 0.934 | 1.3279 s |
 | CNN | 78.48% | 0.785 | 0.3778 s |
 
@@ -46,7 +46,7 @@ Random Forest and ViT produced almost identical test accuracy, while CNN perform
 - ViT: `[[723, 52], [53, 752]]`
 - CNN: `[[621, 154], [186, 619]]`
 
-The class labels are retained as **0** and **1** in the repository because the mask-label convention was not independently re-verified during the final comparison stage.
+The class labels are retained as 0 and 1 in the repository because the mask-label convention was not independently re-verified during the final comparison stage.
 
 ## Spatial rollout
 
@@ -68,17 +68,17 @@ The rollout maps show clear spatial structure, but there is no independent full-
 
 ## Spectral-band importance
 
-Random Forest feature importance was reshaped from the flattened **3 × 3 × 21** input and summed across the nine spatial positions to obtain one importance value per spectral band.
+Random Forest feature importance was reshaped from the flattened 3 × 3 × 21 input and summed across the nine spatial positions to obtain one importance value per spectral band.
 
 The five highest-ranked bands were:
 
 | Rank | Band | Importance |
 |---|---:|---:|
-| 1 | **1** | **0.1918** |
-| 2 | **2** | **0.1454** |
-| 3 | **3** | **0.0751** |
-| 4 | **4** | **0.0516** |
-| 5 | **15** | **0.0474** |
+| 1 | 1 | 0.1918 |
+| 2 | 2 | 0.1454 |
+| 3 | 3 | 0.0751 |
+| 4 | 4 | 0.0516 |
+| 5 | 15 | 0.0474 |
 
 ![Spectral band importance](figures/Spectral_Band_Importance.png)
 
@@ -86,14 +86,14 @@ The importance values describe this fitted Random Forest model and should not be
 
 ## 21 bands versus top 5 bands
 
-A reduced Random Forest model was trained using only Bands **1, 2, 3, 4 and 15**.
+A reduced Random Forest model was trained using only Bands 1, 2, 3, 4 and 15.
 
 Across five Random Forest seeds:
 
 | Input | Mean accuracy | Standard deviation |
 |---|---:|---:|
 | 21 bands | 93.05% | 0.10 percentage points |
-| Top 5 bands | **93.66%** | 0.26 percentage points |
+| Top 5 bands | 93.66% | 0.26 percentage points |
 
 ![21-band versus 5-band Random Forest](figures/RF_21_vs_5_Bands.png)
 
@@ -108,7 +108,7 @@ Mean Random Forest training time was:
 | 21 bands | 14.206 s |
 | Top 5 bands | 5.716 s |
 
-Reducing the input from 21 to 5 bands reduced measured Random Forest training time by **59.8%**.
+Reducing the input from 21 to 5 bands reduced measured Random Forest training time by 59.8%.
 
 ## Environmental cost
 
@@ -119,7 +119,7 @@ CodeCarbon was used to estimate energy consumption and associated CO2-equivalent
 | 21-band, 5 training runs | 0.00044974 kWh | 0.00021173 kg CO2eq |
 | 5-band, 5 training runs | 0.00018756 kWh | 0.00008830 kg CO2eq |
 
-The five-band workload used approximately **58.3% less measured energy** and produced **58.3% lower CodeCarbon-estimated emissions** than the 21-band workload. The absolute values are small and specific to the Google Colab environment, so the relative comparison is the more useful result.
+The five-band workload used approximately 58.3% less measured energy and produced 58.3% lower CodeCarbon-estimated emissions than the 21-band workload. The absolute values are small and specific to the Google Colab environment, so the relative comparison is the more useful result.
 
 The environmental and societal discussion is provided in [`ASSESSMENT.md`](ASSESSMENT.md).
 
@@ -137,7 +137,7 @@ The course data are not redistributed in this repository. The notebook expects t
 
 The analysis uses NumPy, pandas, Matplotlib, scikit-learn, TensorFlow/Keras, joblib and CodeCarbon. Dependencies are listed in [`requirements.txt`](requirements.txt).
 
-The experiments were carried out in **Google Colab**, including T4 GPU acceleration for the neural-network training. Runtime and CodeCarbon measurements are hardware-dependent.
+The experiments were carried out in Google Colab, including T4 GPU acceleration for the neural-network training. Runtime and CodeCarbon measurements are hardware-dependent.
 
 ## Repository structure
 
