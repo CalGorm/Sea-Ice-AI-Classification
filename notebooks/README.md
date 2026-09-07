@@ -1,9 +1,3 @@
 # Notebook
 
-Place the final cleaned Colab/Jupyter notebook for this project in this folder.
-
-Suggested filename:
-
-`sea_ice_ai_classification.ipynb`
-
-The notebook should contain the complete ordered workflow used for the final project, including data loading, preprocessing, model training/evaluation, rollout, spectral-band importance, reduced-band experiments, computational timing and CodeCarbon measurements.
+`Sea_Ice_AI_Classification.ipynb` contains the complete analysis workflow used in this project: data loading, model training and evaluation, spatial rollout, spectral-band importance, the reduced-band Random Forest experiment, computational timing and CodeCarbon measurements.
