@@ -1,0 +1,19 @@
+# Large/local data files
+*.npy
+*.npz
+*.h5
+*.weights.h5
+*.joblib
+
+# Colab / Python caches
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Local environments
+.venv/
+venv/
+
+# OS files
+.DS_Store
+Thumbs.db
