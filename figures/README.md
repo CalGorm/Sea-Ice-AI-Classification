@@ -2,6 +2,7 @@
 
 This folder contains the figures used in the project analysis and README:
 
+- `Workflow_Sea_Ice_Lead_Classification.png`
 - `RF_image2_sample1_25208373.png`
 - `CNN_image2_sample1_25208373.png`
 - `ViT_image2_sample1_25208373.png`
