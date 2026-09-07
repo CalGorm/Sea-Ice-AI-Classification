@@ -191,5 +191,5 @@ The spectral-band experiment also showed that all 21 bands were not necessary fo
 ## Coursework mapping
 
 - Week 1: IRIS mask creation and reference labelling used to generate the labelled sea-ice/lead training data.
-- Week 2: Sea-ice/lead classification and machine-learning implementation, including Random Forest, CNN and ViT training and evaluation.
+- Week 2: 5-minute tutorial video demonstrating the first AI sea-ice classification algorithm, covering the Sea-ice and Lead Classification and AI/Machine Learning Implementation content and showing the classification steps on the trained images.
 - Week 3: Spatial rollout outputs for Random Forest, CNN and ViT: `RF_image2_sample1_25208373.png`, `CNN_image2_sample1_25208373.png`, and `ViT_image2_sample1_25208373.png`.
