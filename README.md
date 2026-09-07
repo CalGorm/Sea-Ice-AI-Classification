@@ -8,7 +8,13 @@ This project investigates binary sea-ice/lead classification from 21-band optica
 
 **Can sea ice and leads be classified accurately from 21-band satellite imagery using a computationally efficient machine-learning approach, and can spectral feature selection reduce model complexity without sacrificing classification performance?**
 
-## Workflow
+## Project workflow
+
+![Workflow for Sea-Ice and Lead Classification](figures/Workflow_Sea_Ice_Lead_Classification.png)
+
+*Figure 1. Workflow for the sea-ice/lead classification project, from 21-band remote-sensing input data and IRIS reference labels through model training, evaluation, spectral-band analysis, reduced-band testing and computational/environmental assessment.*
+
+## Workflow steps
 
 1. Label sea-ice/lead regions using IRIS.
 2. Extract labelled **3 × 3 × 21** image patches.
@@ -146,6 +152,7 @@ Sea-Ice-AI-Classification/
 │   └── Sea_Ice_AI_Classification.ipynb
 ├── figures/
 │   ├── README.md
+│   ├── Workflow_Sea_Ice_Lead_Classification.png
 │   ├── RF_image2_sample1_25208373.png
 │   ├── CNN_image2_sample1_25208373.png
 │   ├── ViT_image2_sample1_25208373.png
