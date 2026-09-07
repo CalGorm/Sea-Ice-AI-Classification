@@ -141,6 +141,8 @@ The course data are not redistributed in this repository. The notebook expects t
 - `y_test_balanced.npy`
 - `image2.npy`
 
+The notebook currently uses `save_path = '/content/drive/MyDrive/GEOL0069_Final_Project/'`. Anyone reproducing the analysis should change `save_path` to the location of their own project directory before running the data-loading cells.
+
 The analysis uses NumPy, pandas, Matplotlib, scikit-learn, TensorFlow/Keras, joblib and CodeCarbon. Dependencies are listed in [`requirements.txt`](requirements.txt).
 
 The experiments were carried out in Google Colab, including T4 GPU acceleration for the neural-network training. Runtime and CodeCarbon measurements are hardware-dependent.
@@ -179,3 +181,9 @@ Sea-Ice-AI-Classification/
 - Five Random Forest seeds provide a repeatability check rather than evidence of universal superiority.
 - Timing and CodeCarbon values depend on the Colab runtime and hardware allocation.
 - The spatial rollout does not have independent ground truth across the full region.
+
+## Conclusion
+
+Random Forest provided the strongest overall accuracy-efficiency trade-off for this dataset. Its test accuracy of 93.42% was essentially the same as the ViT at 93.35%, while its mean prediction time was much lower. The CNN performed less well at 78.48% test accuracy.
+
+The spectral-band experiment also showed that all 21 bands were not necessary for comparable Random Forest performance in this case. Using Bands 1, 2, 3, 4 and 15 produced a mean accuracy of 93.66% across five seeds compared with 93.05% using all 21 bands, while reducing mean training time by 59.8% and measured training energy and CodeCarbon-estimated emissions by about 58.3%. These results suggest that, for this dataset, a simpler model with a smaller spectral input can achieve similar classification performance at lower computational cost, although further validation would be needed before generalising the result to other images, locations or conditions.
